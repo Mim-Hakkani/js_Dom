@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>interacting js in html</title>
+</head>
+<body>
+    <div id="jamira">
+        <h1>Rajshahi is my Hometown</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima eveniet repellendus ea esse, libero quibusdam voluptatem sit aperiam cupiditate suscipit vitae iusto impedit rem sint quia sapiente dolore est nihil quis atque at veritatis enim officiis voluptas? Aperiam nisi hic voluptates, sunt, sit quam omnis rem ad nesciunt dolorum enim facilis velit culpa, alias minima! Tempora possimus eum, est placeat veniam dicta facere quaerat quasi? Delectus quidem omnis maiores odit unde, quis perferendis blanditiis nemo repellat optio consequuntur explicabo ratione rerum fuga architecto laborum est? Repellendus maiores quo earum iste nihil fugiat cupiditate ratione commodi a minima iusto, quis deleniti.</p>  
+    </div>
+    <div class="area-1" id="agla-v">
+        <h1 id="agla-head">Rajshahi is my Hometown</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima eveniet repellendus ea esse, libero quibusdam voluptatem sit aperiam cupiditate suscipit vitae iusto impedit rem sint quia sapiente dolore est nihil quis atque at veritatis enim officiis voluptas? Aperiam nisi hic voluptates, sunt, sit quam omnis rem ad nesciunt dolorum enim facilis velit culpa, alias minima! Tempora possimus eum, est placeat veniam dicta facere quaerat quasi? Delectus quidem omnis maiores odit unde, quis perferendis blanditiis nemo repellat optio consequuntur explicabo ratione rerum fuga architecto laborum est? Repellendus maiores quo earum iste nihil fugiat cupiditate ratione commodi a minima iusto, quis deleniti.</p>  
+    </div>
+
+    <!--- adds some elements of js in this div -->
+
+    <div class="crops" id="j-crops"  >
+        <h1>Crops in Rajshahi</h1>
+        <ul>
+            <li>Mango</li>
+            <li>Guyava</li>
+            <li>Date</li>
+            <li>Banana</li>
+            <li>Paddy</li>
+        </ul>
+    </div>
+
+
+    <div class="area" id="gobin-v">
+        <h1 id="gobin-head">Rajshahi is my Hometown</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima eveniet repellendus ea esse, libero quibusdam voluptatem sit aperiam cupiditate suscipit vitae iusto impedit rem sint quia sapiente dolore est nihil quis atque at veritatis enim officiis voluptas? Aperiam nisi hic voluptates, sunt, sit quam omnis rem ad nesciunt dolorum enim facilis velit culpa, alias minima! Tempora possimus eum, est placeat veniam dicta facere quaerat quasi? Delectus quidem omnis maiores odit unde, quis perferendis blanditiis nemo repellat optio consequuntur explicabo ratione rerum fuga architecto laborum est? Repellendus maiores quo earum iste nihil fugiat cupiditate ratione commodi a minima iusto, quis deleniti.</p>  
+    </div>
+    <div class="area" id="rajbari">
+        <h1>Rajshahi is my Hometown</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima eveniet repellendus ea esse, libero quibusdam voluptatem sit aperiam cupiditate suscipit vitae iusto impedit rem sint quia sapiente dolore est nihil quis atque at veritatis enim officiis voluptas? Aperiam nisi hic voluptates, sunt, sit quam omnis rem ad nesciunt dolorum enim facilis velit culpa, alias minima! Tempora possimus eum, est placeat veniam dicta facere quaerat quasi? Delectus quidem omnis maiores odit unde, quis perferendis blanditiis nemo repellat optio consequuntur explicabo ratione rerum fuga architecto laborum est? Repellendus maiores quo earum iste nihil fugiat cupiditate ratione commodi a minima iusto, quis deleniti.</p>  
+    </div>
+    
+    <button onclick="jamira()">Jamira</button>
+    <button id="agla">Agla</button>
+    <button id="gobin">Govindopur</button>
+    <button id="bazar">Banessor</button>
+    <button id="puthia">puthia</button>
+
+    <script>
+
+        //events for normal fumction and onclick
+        function jamira(){
+            document.getElementById('jamira').style.backgroundColor="pink";
+            document.getElementById('jamira').style.border="2px solid red";
+            document.getElementById('jamira').style.padding="5px";
+        }
+
+        //events for most used way
+
+        const Agla = document.getElementById('agla');
+        Agla.addEventListener('click',function(){
+            document.getElementById('agla-v').style.backgroundColor="orange";
+            document.getElementById('agla-v').style.color="white";
+            document.getElementById('agla-head').innerText="Agla's People are very honest";
+            document.getElementById('agla-head').style.textAlign="center";
+        });
+
+        //same work using same events using directly
+
+        document.getElementById('gobin').addEventListener('click',function(){
+
+            document.getElementById('gobin-v').style.backgroundColor ="#BC55F7";
+            document.getElementById('gobin-v').style.padding ="10px";
+            document.getElementById('gobin-v').style.color ="#000";
+
+               //simple work in govindopur header  
+
+            document.getElementById('gobin-head').innerText ="Gobindopur is the river side area in rajshahi"
+            document.getElementById('gobin-head').style.textShadow="5px 8px 5px #fff"
+
+        });
+
+        //add some tags using js + add events using 
+
+           /* step 1 */
+
+                const pp = document.createElement('h5');
+                pp.innerText ="There are lots of hard work if you want to the top.. ";
+          
+            /* step 2 :
+                
+                i) catch the parent id by document..
+                ii)appendchild(variable name which store in creating tags)
+            */
+
+             document.getElementById('j-crops').appendChild(pp);
+
+        // now add events function
+
+         const banasor = document.getElementById('bazar').addEventListener('click',function(){
+
+            document.getElementById('j-crops').style.backgroundColor ="#000";
+            document.getElementById('j-crops').style.color ="#fff";
+            document.getElementById('j-crops').style.padding ="10px";
+
+         });
+
+
+         document.getElementById('puthia').addEventListener('click',function(){
+
+             document.getElementById('rajbari').style.backgroundColor="#BF081B";
+             document.getElementById('rajbari').style.color="#fff";
+         });
+
+
+          
+
+            
+
+
+
+    </script>
+    
+</body>
+</html>
