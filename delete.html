@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete play with domm</title>
+</head>
+<body>
+
+    <div style="display: flex; margin-left: 25px; text-align: center;padding: 25px;">
+    <div id="delete-js" style="background-color: aqua;">
+        <h1>Delete item 1</h1>
+        <h3 id="ami-h3">Press delete button and see the magic</h3>
+        <h2 id="ami-nai">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, ipsum.</h2>
+
+        <button id="delete"  style="padding: 10px 25px;background-color: rgb(100, 154, 209);">Delete </button>
+    </div>
+
+    <div id="delete-js2" style="background-color: aquamarine;">
+        <h1>Delete item 2</h1>
+
+        <h3 id="ami-h2">Press delete button and see the magic</h3>
+
+        <h2 id="ami-asi">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, ipsum.</h2>
+        <button id="delete2"  style="padding: 10px 25px;background-color: rgb(100, 154, 209);">Delete 2</button>
+    </div>
+
+</div>
+
+<!-- github-style-delete  -->
+
+<div>
+    <h3>Amader choto nodi chole bake bake ...boisak mase tar hato jon thake</h3>
+    <input type="text" id="delete-conform" placeholder="type delete to conform">
+    <button id="d-btn" disabled>Delete</button>
+</div>
+
+
+
+
+
+    <script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        /********* delete item process : 1  ******************/
+
+        document.getElementById('delete').addEventListener('click',function(){
+            alert('Are you sure to delete');
+            document.getElementById('ami-h3').style.display ='none';
+           
+        });
+
+        /********* delete item process : 2  ******************/
+
+        document.getElementById('delete2').addEventListener('click',function(){
+            alert('Are you sure to delete 2');
+            document.getElementById('ami-h2').style.display ='none';
+        });
+
+    </script>
+    
+</body>
+</html>
