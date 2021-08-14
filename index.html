@@ -134,7 +134,20 @@
 
 
    
-          
+
+
+
+// input area play with js dom
+  document.getElementById('update').addEventListener('click',function(){
+      let input_value = document.getElementById('name').value;
+      console.log(input_value);
+      document.getElementById('value').innerText = input_value;
+      document.getElementById('name').value  = '';
+  })
+ 
+
+
+
 
             
 
