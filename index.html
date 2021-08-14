@@ -148,7 +148,28 @@
 
 
 
+          
+/* comments section dynamic in js */
 
+document.getElementById('submit').addEventListener('click',function(){
+
+ 
+const tvalue = document.getElementById('comments').value;
+
+//create a html value  and add text inside the value 
+
+const para = document.createElement('h4');
+para.innerText = tvalue;
+
+console.log(para);
+
+   // add into the rajbari area section 
+
+const dname = document.getElementById('rajbari')
+dname.appendChild(para);
+document.getElementById('comments').value = " ";
+
+});
             
 
 
